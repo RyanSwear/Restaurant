@@ -1,1 +1,1 @@
-console.log("testing webpack");
+(()=>{"use strict";(()=>{let e=document.querySelector("body"),t=document.createElement("div"),d=document.createElement("h2");t.setAttribute("id","header"),d.classList.add("hero-text"),d.innerText="Welcome\nto\n Swear's Food Place",t.appendChild(d),e.appendChild(t)})()})();
