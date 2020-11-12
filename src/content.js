@@ -28,6 +28,10 @@ const menu = {
     }
 };
 
+
+
+
+
 const renderContent = () => {
     let content = document.getElementById('content');
 
@@ -36,25 +40,58 @@ const renderContent = () => {
 
     let tab1 = document.createElement('li');
     tab1.innerText = 'Appetizers';
+    tab1.addEventListener('click', function (){
+        fillMenu(tab1.innerText);
+    });
 
     let tab2 = document.createElement('li');
     tab2.innerText = "Entre's";
+    tab2.addEventListener('click', function (){
+        fillMenu(tab2.innerText);
+    });
 
     let tab3 = document.createElement('li');
     tab3.innerText = "Deserts";
+    tab3.addEventListener('click', function (){
+        fillMenu(tab3.innerText);
+    });
 
     let tab4 = document.createElement('li');
     tab4.innerText = "Beverages";
+    tab4.addEventListener('click', function (){
+        fillMenu(tab4.innerText);
+    });
 
     tabs.appendChild(tab1);
     tabs.appendChild(tab2);
     tabs.appendChild(tab3);
     tabs.appendChild(tab4);
 
+    let menu = document.createElement('div');
+    menu.id = "menu";
+    //menu.innerText = 'heello my friendings';
+
     wrapper.appendChild(tabs);
+    wrapper.appendChild(menu);
 
     content.appendChild(wrapper);
     
+}
+
+const fillMenu = (text) => {
+    let menu = document.getElementById('menu');
+    menu.innerText = 'goooooaaaaallllll';
+    if(text == 'Appetizers')
+    {
+        //menu = document.getElementById('menu');
+        menu.innerText = 'hello my friendlings';
+    }
+}
+
+const renderAppetizer = () => {
+    div = document.createElement('div');
+    div.innerText = "testing my friend";
+    return div;
 }
 
 export {renderContent};
